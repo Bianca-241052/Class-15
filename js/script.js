@@ -32,4 +32,32 @@ document.querySelector(".out code").innerHTML = out;
 
 alert("Hi " + formData.name + ". Thank you for you message");
 
+// console. Log (formData.name) ;
+// sessionStorage. setItem("sName", formData. name);
+// console. Log ("Success");
+
+SaveUserName (formData. name);
+SessionSaveBio(formData.bio);
+}
+
+function SessionSaveBio (data)
+{
+    sessionStorage.setItem("sBio", data);
+}
+
+function loadSessionBio()
+{
+    let cache = sessionStorage.getItem("sBio");
+    alert("I cried when you said: " + cache); 
+}
+
+function SaveUserName (dataToSave)
+{
+console. log ("Save");
+localStorage.setItem("localName", dataToSave) ;
+}
+function LoadData ()
+{
+let temp = localstorage.getItem ("localName");
+console. log("Loaded " + temp);
 }
